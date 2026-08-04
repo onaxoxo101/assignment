@@ -1,59 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Fitness — Train Hard, Live Strong</title>
+  <meta name="description" content="Pulse Fitness is a modern gym offering strength, HIIT, yoga and personal training programs. Join today and transform your body." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Homepage</a>
-                </li>
 
-                <li>
-                    <a href="aboutpage.html">About</a>
-                </li>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">⚡ PULSE<span>FIT</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary nav-cta">Join Now</a>
+      </nav>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
 
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">#1 Rated Gym In The City</span>
+        <h1>Train Hard.<br /><span class="grad">Live Strong.</span></h1>
+        <p class="lead">Unlock your full potential with world-class coaches, cutting-edge equipment, and programs built around your goals — whether you're just starting out or chasing a podium.</p>
+        <div class="hero-actions">
+          <a href="pricing.html" class="btn btn-primary">Start Free Trial →</a>
+          <a href="programs.html" class="btn btn-ghost">Explore Programs</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b><span data-count="12" data-suffix="K+">0</span></b><span>Active Members</span></div>
+          <div class="stat"><b><span data-count="45">0</span></b><span>Expert Trainers</span></div>
+          <div class="stat"><b><span data-count="60" data-suffix="+">0</span></b><span>Weekly Classes</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-badge">
+          <div class="dot">🔥</div>
+          <div><b>Burn 700+ cal</b><small>per HIIT session</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <li>
-                    <a href="mentor.html">Mentor</a>
-                </li>
+  <!-- FEATURES -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Why Pulse</span>
+        <h2 class="title">Everything You Need To Succeed</h2>
+      </div>
+      <div class="grid grid-4">
+        <div class="card reveal"><div class="icon">🏋️</div><h3>Modern Equipment</h3><p>State-of-the-art machines and free weights maintained daily for a premium workout.</p></div>
+        <div class="card reveal"><div class="icon">🧑‍🏫</div><h3>Certified Coaches</h3><p>Train with qualified pros who tailor every session to your fitness level and goals.</p></div>
+        <div class="card reveal"><div class="icon">🕒</div><h3>Open 24/7</h3><p>Life is busy. Work out on your schedule with round-the-clock member access.</p></div>
+        <div class="card reveal"><div class="icon">🥗</div><h3>Nutrition Plans</h3><p>Personalised meal guidance to fuel your progress and recover faster.</p></div>
+      </div>
+    </div>
+  </section>
 
-                <li>
-                    <a href="chess.html">Chesspage</a>
-                </li>
+  <!-- PROGRAMS PREVIEW -->
+  <section style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our Programs</span>
+        <h2 class="title">Find Your Perfect Workout</h2>
+        <p class="text-muted">From explosive strength training to mindful mobility, there's a program for every body.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="program reveal"><span class="prog-emoji">💪</span><div class="prog-body"><span class="tag">Strength</span><h3>Power Lifting</h3><p>Build raw strength and muscle with structured barbell training.</p></div></div>
+        <div class="program reveal"><span class="prog-emoji">🔥</span><div class="prog-body"><span class="tag">Cardio</span><h3>HIIT Blast</h3><p>Torch calories in high-intensity intervals that keep burning after.</p></div></div>
+        <div class="program reveal"><span class="prog-emoji">🧘</span><div class="prog-body"><span class="tag">Mobility</span><h3>Yoga & Flow</h3><p>Improve flexibility, balance and recovery with guided sessions.</p></div></div>
+      </div>
+      <div style="text-align:center; margin-top:44px;" class="reveal">
+        <a href="programs.html" class="btn btn-primary">View All Programs</a>
+      </div>
+    </div>
+  </section>
 
-                <li>
-                    <a href="scores.html">Scores</a>
-                </li>
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Success Stories</span>
+        <h2 class="title">Loved By Our Members</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="quote reveal"><div class="stars">★★★★★</div><p>"I lost 18kg in 5 months. The coaches genuinely care and kept me accountable every step of the way."</p><div class="who"><div class="pfp">AM</div><div><b>Amara Okafor</b><small>Member since 2023</small></div></div></div>
+        <div class="quote reveal"><div class="stars">★★★★★</div><p>"Best gym I've ever joined. Clean, welcoming, and the HIIT classes are absolutely addictive."</p><div class="who"><div class="pfp">DK</div><div><b>David Kim</b><small>HIIT enthusiast</small></div></div></div>
+        <div class="quote reveal"><div class="stars">★★★★★</div><p>"Deadlifted my first 140kg thanks to the strength program. Life-changing coaching."</p><div class="who"><div class="pfp">SJ</div><div><b>Sara Johnson</b><small>Powerlifter</small></div></div></div>
+      </div>
+    </div>
+  </section>
 
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Your Transformation Starts Today</h2>
+        <p>Join thousands who chose to become stronger. Get your first week completely free — no card required.</p>
+        <a href="contact.html" class="btn btn-primary">Claim Your Free Week</a>
+      </div>
+    </div>
+  </section>
 
-            </ul>
-        </nav>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="f-about">
+          <a href="index.html" class="logo">⚡ PULSE<span>FIT</span></a>
+          <p>Building stronger bodies and healthier lives since 2015. Your journey to greatness starts here.</p>
+        </div>
+        <div><h4>Explore</h4><div class="f-links"><a href="about.html">About Us</a><a href="programs.html">Programs</a><a href="trainers.html">Trainers</a><a href="pricing.html">Pricing</a></div></div>
+        <div><h4>Support</h4><div class="f-links"><a href="contact.html">Contact</a><a href="pricing.html">Membership</a><a href="#">FAQ</a><a href="#">Privacy</a></div></div>
+        <div class="f-newsletter"><h4>Newsletter</h4><p class="text-muted" style="font-size:.9rem;">Get workout tips & offers in your inbox.</p>
+          <form class="newsletter"><input type="email" placeholder="Your email" required /><button type="submit" class="btn btn-primary">Join</button></form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Pulse Fitness. All rights reserved.</span>
+        <div class="socials"><span>📘</span><span>📸</span><span>🐦</span><span>▶️</span></div>
+      </div>
+    </div>
+  </footer>
 
-        <main>
-            <h1>MY GOALS IN ATTENDING WEB DEV CLASS</h1>
-            <p>My goal in attending web development class is learning all the aspects of how to create website for
-                anyone
-                in need and to be paid. <br>
-                Also to gain knowledge in web development and acquire enough skill in html,css
-                and javascript.
-            </p>
-        </main>
-
-
-
-
-
-    </header>
+  <script src="script.js"></script>
 </body>
-
 </html>
