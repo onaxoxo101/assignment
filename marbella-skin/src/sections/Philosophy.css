@@ -1,0 +1,82 @@
+/* Figma node 42:2 — "02 / Philosophy", 1440 x 643.
+   Vertical rhythm reads directly off the node y-positions:
+     eyebrow    y=110  h=16
+     statement  y=170  h=186   (gap 44)
+     stats      y=400  h=155   (gap 44)
+   110 + 16 + 44 + 186 + 44 + 155 = 555, leaving 88px of tail inside 643.    */
+
+.philosophy {
+  height: 643px;
+  padding-top: 110px;
+  background: var(--c-bg);
+}
+
+.philosophy__eyebrow-wrap {
+  text-align: center; /* node 42:3 is centred: x=640 w=160 -> centre 720 */
+}
+
+.philosophy__statement-wrap {
+  margin-top: 44px;
+}
+
+/* Node 42:4 — x=220 w=1000 (centred), h=186 = 3 lines x 62 */
+.philosophy__statement {
+  width: 1000px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-statement);
+  line-height: var(--lh-statement);
+  text-align: center;
+  color: var(--c-ink);
+}
+
+/* Node 42:5 — x=100 w=1240 h=155 */
+.philosophy__stats {
+  display: flex;
+  width: var(--content-w);
+  height: 155px;
+  margin: 44px auto 0;
+  gap: 1px; /* the 1px rules at x=412.667 and x=826.333 */
+}
+
+.philosophy__cell {
+  position: relative;
+  flex: 0 0 412.667px; /* [FIGMA] (1240 - 2) / 3 */
+  padding-top: 34px; /* [FIGMA] stat content starts at y=34 within 42:5 */
+}
+
+/* Nodes 42:9 / 42:13 — 1 x 72 rules, top-aligned with the stat content */
+.philosophy__rule {
+  position: absolute;
+  top: 34px;
+  left: -1px;
+  width: 1px;
+  height: 72px;
+  background: var(--c-line);
+}
+
+.philosophy__stat {
+  text-align: center;
+}
+
+/* Nodes 42:7 / 42:11 / 42:15 — widths 84 / 110 / 63, line box 61 */
+.philosophy__value {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-stat-number);
+  line-height: var(--lh-stat-number);
+  color: var(--c-ink);
+}
+
+/* Nodes 42:8 / 42:12 / 42:16 — fixed 250px wide, centred, 24px line box.
+   The third label is the only one that wraps to two lines (h=48).           */
+.philosophy__label {
+  width: 250px;
+  margin: 12px auto 0; /* [FIGMA] number box ends at 61, label starts at 73 */
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--c-muted);
+}

@@ -1,0 +1,98 @@
+/* =============================================================================
+   Design tokens — Marbella Skin landing page
+   =============================================================================
+
+   PROVENANCE LEGEND
+   -----------------
+   [FIGMA]    Value read directly from the Figma file (node geometry / copy).
+              These are exact and must not be changed without a design change.
+   [FITTED]   Not readable directly, but solved for: the value was chosen so the
+              rendered text box reproduces the width/height Figma reports for
+              that text node (least-squares fit across every string in the role,
+              residual noted). See FIGMA-FIDELITY.md.
+   [INFERRED] Not recoverable from the data available. Chosen to be internally
+              coherent. THESE ARE THE VALUES TO REPLACE FIRST once Figma read
+              access is restored.
+
+   Why the split: the Figma MCP plan quota was exhausted mid-session, so
+   get_design_context / get_variable_defs / asset export never returned. Only
+   get_metadata (structure + geometry + copy) came back. Full detail and the
+   exact list of unknowns is in FIGMA-FIDELITY.md at the repo root.
+   ========================================================================== */
+
+:root {
+  /* --- Canvas ------------------------------------------------------------ */
+  --canvas-w: 1440px;          /* [FIGMA] frame 41:2 width */
+  --gutter: 100px;             /* [FIGMA] content insets on 02/03/04/05 */
+  --content-w: 1240px;         /* [FIGMA] 1440 - 2*100 */
+
+  /* --- Type families ----------------------------------------------------- */
+  /* [INFERRED] family identity. [FITTED] metrics: Playfair Display 500 and
+     Inter reproduce every measured Figma text width to within ~1%. */
+  --font-display: 'Playfair Display', 'Times New Roman', Times, serif;
+  --font-sans: 'Inter', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  /* --- Type scale --------------------------------------------------------
+     Every line-height below is [FIGMA] (text node height / line count).
+     Every font-size is [FITTED] against the Figma text node width.          */
+
+  /* Display / serif */
+  --fs-hero-title: 52px;       --lh-hero-title: 66px;   /* node 19:39  637x132 = 2 x 66 */
+  --fs-statement: 44px;        --lh-statement: 62px;    /* node 42:4  1000x186 = 3 x 62 */
+  --fs-section-title: 40.3px;    --lh-section-title: 53px;/* nodes 45:6 (507) / 46:5 (447) */
+  --fs-concerns-title: 40.3px;   --lh-concerns-title: 54px;/* node 43:4  490x108 = 2 x 54 */
+  --fs-stat-number: 47px;      --lh-stat-number: 61px;  /* nodes 42:7/11/15 -> 84/110/63 */
+  --fs-price: 25px;            --lh-price: 32px;        /* nodes 45:21/34/46 -> 76/76/73 */
+  --fs-wordmark: 20.3px;       --lh-wordmark: 29px;     /* node 19:63  127x29 */
+
+  /* Sans */
+  --fs-hero-body: 22px;        --lh-hero-body: 35px;    /* node 19:40  637x105 = 3 x 35 */
+  --fs-benefit-title: 21px;    --lh-benefit-title: 25px;/* nodes 46:13/20/28/35 */
+  --fs-product-name: 18px;     --lh-product-name: 22px; /* nodes 45:18/31/43 -> 173/200/182 */
+  --fs-card-title: 17px;       --lh-card-title: 21px;   /* nodes 43:13/21/29/38/46/54 */
+  --fs-body: 15px;             --lh-body: 24px;         /* nodes 42:8, 46:14 (2 x 24) */
+  --fs-pill: 15px;             --lh-pill: 18px;         /* nodes 43:6 (126) / 45:8 (142) */
+  --fs-product-desc: 14px;     --lh-product-desc: 20px; /* nodes 45:19/32/44 */
+  --fs-bag: 14px;              --lh-bag: 17px;          /* nodes 45:23/36/48 -> 74 */
+  --fs-card-sub: 13px;         --lh-card-sub: 16px;     /* nodes 43:14/22/30/39/47/55 */
+
+  /* Tracked uppercase */
+  --fs-eyebrow: 14px;          --lh-eyebrow: 16px;      --ls-eyebrow: 2.6px;
+  /* [FITTED] residual 0.06%: predicts 160/197/153 vs Figma 160/197/153 */
+  --fs-nav: 15px;              --lh-nav: 22px;          --ls-nav: 2.27px;
+  --fs-cta: 20px;              --lh-cta: 35px;          --ls-cta: 4px;
+  --fs-numeral: 22px;          --lh-numeral: 27px;      --ls-numeral: 5.8px;
+
+  /* --- Colour ------------------------------------------------------------
+     [INFERRED] — every value below. No colour survives in the metadata the
+     MCP server returned. Palette is built to be coherent for the brand and
+     is deliberately confined to this block so it can be swapped wholesale.  */
+  --c-bg: #f7f4ee;
+  --c-surface: #ede7dc;
+  --c-surface-deep: #e4dcce;
+  --c-ink: #1f1d19;
+  --c-muted: #6f6959;
+  --c-line: #dcd4c6;
+  --c-accent: #3d4a38;
+  --c-on-accent: #f7f4ee;
+
+  /* Per-card tints for the 03 / Skin Concerns photo plates [INFERRED] */
+  --c-tint-acne: #dde3d6;
+  --c-tint-dry: #e6dacb;
+  --c-tint-sensitive: #e9dddc;
+  --c-tint-spots: #ded8e0;
+  --c-tint-oil: #d9e1e3;
+  --c-tint-aging: #e5ddd0;
+
+  /* --- Radii / borders ---------------------------------------------------
+     [INFERRED] — Figma reports node type `rounded-rectangle` but the corner
+     radius itself is not in the metadata payload.                           */
+  --r-card: 20px;
+  --r-plate: 16px;
+  --r-pill: 999px;
+  --r-panel: 24px;
+  --r-vessel: 10px;
+
+  /* --- Motion [INFERRED, per the "keep it subtle" brief] ----------------- */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

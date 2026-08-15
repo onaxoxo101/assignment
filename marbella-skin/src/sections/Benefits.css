@@ -1,0 +1,106 @@
+/* Figma node 46:2 — "05 / Benefits", 1440 x 695.
+     heading  x=496.5 y=100 w=447 h=83   (eyebrow 16 + 14 gap + title 53)
+     grid     x=100   y=239 w=1240 h=352 (two 176px rows, no row gap)
+   239 + 352 = 591, leaving 104px of tail inside 695.                         */
+
+.benefits {
+  height: 695px;
+  padding-top: 100px;
+  background: var(--c-bg);
+}
+
+/* Node 46:3 — centred block; the eyebrow is centred inside it (46:4 x=147) */
+.benefits__heading {
+  width: 447px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.benefits__title {
+  margin-top: 14px; /* [FIGMA] eyebrow box ends at 16, title starts at y=30 */
+  white-space: nowrap;
+}
+
+/* Node 46:6 — two columns of 580 with an 80px gutter */
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 580px);
+  column-gap: 80px;
+  row-gap: 0; /* [FIGMA] row 2 starts at y=176, immediately after row 1 */
+  width: var(--content-w);
+  margin: 56px auto 0; /* [FIGMA] heading ends at 183, grid starts at 239 */
+}
+
+/* Nodes 46:8 … — 580 x 176 */
+.benefit {
+  position: relative;
+  width: 580px;
+  height: 176px;
+  padding-top: 30px; /* [FIGMA] the rule sits at y=30 */
+}
+
+/* Node 46:9 — 580 x 1 */
+.benefit__rule {
+  position: relative;
+  display: block;
+  width: 580px;
+  height: 1px;
+  background: var(--c-line);
+  overflow: hidden;
+}
+
+/* Motion only: the ink-coloured sweep on hover. Resting state is scaleX(0),
+   so the rule renders exactly as designed until pointed at. */
+.benefit__rule-fill {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: var(--c-ink);
+  transform-origin: left center;
+}
+
+/* Node 46:10 — 580 x 85, 26px below the rule (rule at 30/31, row at y=57) */
+.benefit__row {
+  display: flex;
+  margin-top: 26px;
+  height: 85px;
+}
+
+/* Nodes 46:11 … — 38 x 27 tracked numeral */
+.benefit__n {
+  flex: none;
+  align-self: flex-start;
+  width: 38px;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-numeral);
+  line-height: var(--lh-numeral);
+  letter-spacing: var(--ls-numeral);
+  color: var(--c-muted);
+}
+
+/* Node 46:12 — 518 wide, starting at x=62 within the 580 column */
+.benefit__text {
+  width: 518px;
+  margin-left: 24px; /* 38 (numeral box) + 24 = 62 */
+}
+
+/* Nodes 46:13 … — 25px line box */
+.benefit__title {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-benefit-title);
+  line-height: var(--lh-benefit-title);
+  color: var(--c-ink);
+  white-space: nowrap;
+}
+
+/* Nodes 46:14 … — 518 x 48 = 2 lines x 24 */
+.benefit__body {
+  margin-top: 12px; /* [FIGMA] title box ends at 25, body starts at y=37 */
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--c-muted);
+}

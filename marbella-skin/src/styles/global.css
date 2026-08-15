@@ -1,0 +1,93 @@
+@import './fonts.css';
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--c-bg);
+  color: var(--c-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Desktop-only build, per brief: no responsive/mobile layout yet. The
+     1440px canvas is fixed and the page scrolls horizontally below that. */
+  min-width: var(--canvas-w);
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* The whole design is authored on a 1440px canvas (Figma frame 41:2). Every
+   section is exactly 1440 wide and its Figma height. */
+.canvas {
+  width: var(--canvas-w);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.section {
+  width: var(--canvas-w);
+  position: relative;
+}
+
+/* Shared: tracked uppercase eyebrow (nodes 42:3, 45:5, 46:4) */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-eyebrow);
+  line-height: var(--lh-eyebrow);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--c-muted);
+  white-space: nowrap;
+}
+
+/* Shared: serif section title (nodes 45:6, 46:5) */
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-section-title);
+  line-height: var(--lh-section-title);
+  letter-spacing: 0;
+  color: var(--c-ink);
+}
+
+/* Shared: outlined pill link (nodes 43:5 "View All", 45:7 "Explore") */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* [FIGMA] label right edge -> arrow left edge */
+  justify-content: center;
+  padding: 0 25px; /* [FIGMA] 26px, less the 1px CSS border that Figma
+                      strokes do not add to the frame box */
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--c-ink);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-pill);
+  line-height: var(--lh-pill);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.pill__arrow {
+  display: block;
+  flex: none;
+}

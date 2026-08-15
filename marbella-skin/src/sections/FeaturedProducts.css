@@ -1,0 +1,168 @@
+/* Figma node 45:2 — "04 / Featured Products", 1440 x 765.
+     header    x=100 y=90  w=1240 h=79
+     products  x=100 y=213 w=1240 h=458   (gap 44)
+   213 + 458 = 671, leaving 94px of tail inside 765.                          */
+
+.products {
+  height: 765px;
+  padding-top: 90px;
+  background: var(--c-bg);
+}
+
+.products__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: var(--content-w);
+  height: 79px;
+  margin: 0 auto;
+}
+
+/* Node 45:4 — 507 x 79: eyebrow (16) + 10px gap + title (53) */
+.products__heading {
+  width: 507px;
+}
+
+.products__title {
+  margin-top: 10px; /* [FIGMA] eyebrow box ends at 16, title starts at y=26 */
+  white-space: nowrap;
+}
+
+/* Node 45:7 — 217 x 48, centred in the 79px header: (79 - 48) / 2 = 15.5 */
+.products__pill {
+  width: 217px;
+  height: 48px;
+  margin-top: 15.5px;
+  text-decoration: none;
+}
+
+/* Node 45:10 — three 396 columns, 26px gaps, cards centred on the row */
+.products__row {
+  display: grid;
+  grid-template-columns: repeat(3, 396px);
+  align-items: center;
+  gap: 26px;
+  width: var(--content-w);
+  height: 458px;
+  margin: 44px auto 0;
+}
+
+/* Nodes 45:11 / 45:24 / 45:37 — 396 wide, 22px side padding, 24px at the foot */
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 396px;
+  padding: 22px 22px 24px;
+  border-radius: var(--r-card);
+  background: var(--c-surface);
+}
+
+/* Node 45:12 — 352 x 256 (or 286 on the centre card) */
+.product__stage {
+  position: relative;
+  width: 352px;
+  border-radius: var(--r-plate);
+  background: var(--c-surface-deep);
+  overflow: hidden;
+}
+
+.product__vessel {
+  position: absolute;
+  inset: 0;
+}
+
+/* Every vessel part is centred in the 352px stage and positioned by its
+   Figma y. Widths/heights come straight from the Figma nodes. */
+.vessel {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+
+.vessel--body,
+.vessel--jar {
+  border-radius: var(--r-vessel);
+  background: var(--c-bg);
+}
+
+.vessel--neck {
+  border-radius: 3px;
+  background: var(--c-bg);
+}
+
+.vessel--cap,
+.vessel--lid {
+  border-radius: 6px;
+  background: var(--c-accent);
+}
+
+.vessel--label {
+  border-radius: 4px;
+  background: var(--c-surface-deep);
+}
+
+.vessel--dot {
+  border-radius: 50%; /* node 45:41 is an ellipse */
+  background: var(--c-surface-deep);
+}
+
+/* Node 45:17 — 352 x 49, 18px below the stage */
+.product__meta {
+  width: 352px;
+  margin-top: 18px;
+}
+
+.product__name {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-product-name);
+  line-height: var(--lh-product-name);
+  color: var(--c-ink);
+  white-space: nowrap;
+}
+
+.product__desc {
+  margin-top: 7px; /* [FIGMA] name box ends at 22, desc starts at y=29 */
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-product-desc);
+  line-height: var(--lh-product-desc);
+  color: var(--c-muted);
+  white-space: nowrap;
+}
+
+/* Node 45:20 — 352 x 41, 18px below the meta block */
+.product__buy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 352px;
+  height: 41px;
+  margin-top: 18px;
+}
+
+/* Node 45:21 — 76 x 32, vertically centred in the 41px row */
+.product__price {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-price);
+  line-height: var(--lh-price);
+  color: var(--c-ink);
+}
+
+/* Node 45:22 — 114 x 41 with 20px of horizontal padding */
+.product__bag {
+  flex: none;
+  width: 114px;
+  height: 41px;
+  padding: 0;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-pill);
+  color: var(--c-ink);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-bag);
+  line-height: var(--lh-bag);
+  cursor: pointer;
+}

@@ -1,0 +1,193 @@
+/* Figma node 41:3 "01 / Hero" (1440 x 1024), built from artboard 19:36
+   because 41:3 itself is an empty frame. Coordinates below are 19:36's.      */
+
+.hero {
+  position: relative;
+  height: 1024px;
+  background: var(--c-bg);
+}
+
+/* Nodes 19:37 / 19:38 — 687 x 863 at y=111.
+   19:37 sits at x=31.75; 19:38 is mirrored to the opposite margin so the two
+   panels meet at the canvas centre (Figma reports its x as a right edge).    */
+.hero__panel {
+  position: absolute;
+  top: 111px;
+  width: 687px;
+  height: 863px;
+  border-radius: var(--r-panel);
+}
+
+.hero__panel--left {
+  left: 31.75px;
+  /* [INFERRED] the node carries an image fill that could not be exported. */
+  background: linear-gradient(155deg, var(--c-surface-deep) 0%, #cfd6c4 55%, #b9c4ad 100%);
+}
+
+.hero__panel--right {
+  left: 721.25px; /* 1440 - 687 - 31.75 */
+  background: var(--c-surface);
+}
+
+/* Node 19:44 — x=47 y=33 w=1346 h=49 */
+.hero__nav {
+  position: absolute;
+  top: 33px;
+  left: 47px;
+  display: flex;
+  align-items: flex-start;
+  width: 1346px;
+  height: 49px;
+  z-index: 2;
+}
+
+/* Node 19:58 — 441 x 22 at y=14 within the nav; 44px gaps between labels */
+.hero__links {
+  display: flex;
+  gap: 44px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__link {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-nav);
+  line-height: var(--lh-nav);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--c-ink);
+  white-space: nowrap;
+}
+
+/* Node 19:63 — 127 x 29, horizontally centred in the 1346px nav */
+.hero__wordmark {
+  position: absolute;
+  left: 609px;
+  top: 10px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-wordmark);
+  line-height: var(--lh-wordmark);
+  color: var(--c-ink);
+  white-space: nowrap;
+}
+
+/* Node 19:46 — 179 x 43.03 flush to the nav's right edge, y=3 */
+.hero__socials {
+  display: flex;
+  gap: 24.96px; /* [FIGMA] 67.985 - 43.029 */
+  margin: 3px 0 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43.03px;
+  height: 43.03px;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-pill);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+
+/* Node 19:39 — 637 x 132 (2 lines x 66) at x=743 y=213 */
+.hero__title {
+  position: absolute;
+  left: 743px;
+  top: 213px;
+  width: 637px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-hero-title);
+  line-height: var(--lh-hero-title);
+  color: var(--c-ink);
+}
+
+/* Node 19:40 — 637 x 105 (3 lines x 35) at x=743 y=387 */
+.hero__body {
+  position: absolute;
+  left: 743px;
+  top: 387px;
+  width: 637px;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-hero-body);
+  line-height: var(--lh-hero-body);
+  color: var(--c-muted);
+}
+
+/* Node 19:41 — 247 x 247 at x=938 y=537 */
+.hero__render {
+  position: absolute;
+  left: 938px;
+  top: 537px;
+  width: 247px;
+  height: 247px;
+}
+
+.hero__render-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* [INFERRED] 19:41 is a background-removed product photo. It could not be
+   exported, so it is stood in for with the same vessel vocabulary the
+   04 / Featured Products stages use, fitted to the 247x247 box. */
+.hero__v-body {
+  width: 110px;
+  height: 170px;
+  top: 66px;
+}
+
+.hero__v-neck {
+  width: 28px;
+  height: 32px;
+  top: 36px;
+}
+
+.hero__v-cap {
+  width: 44px;
+  height: 30px;
+  top: 8px;
+}
+
+.hero__v-label {
+  width: 76px;
+  height: 64px;
+  top: 118px;
+}
+
+/* Node 19:42 — 586 x 73 at x=777 y=836, label centred */
+.hero__cta {
+  position: absolute;
+  left: 777px;
+  top: 836px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 586px;
+  height: 73px;
+  border-radius: var(--r-pill);
+  background: var(--c-accent);
+  color: var(--c-on-accent);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-cta);
+  line-height: var(--lh-cta);
+  letter-spacing: var(--ls-cta);
+  text-decoration: none;
+  text-indent: var(--ls-cta); /* offset the trailing letter-space so the
+                                 138px label sits truly centred */
+}

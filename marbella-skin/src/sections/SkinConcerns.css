@@ -1,0 +1,122 @@
+/* Figma node 43:2 — "03 / Skin Concerns", 1440 x 972.
+     header  x=100 y=96  w=1240 h=108
+     grid    x=100 y=250 w=1240 h=622   (rows 298 + 26 gap + 298)
+   250 + 622 = 872, leaving the 100px bottom gutter inside 972.              */
+
+.concerns {
+  height: 972px;
+  padding-top: 96px;
+  background: var(--c-bg);
+}
+
+.concerns__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: var(--content-w);
+  height: 108px;
+  margin: 0 auto;
+}
+
+/* Node 43:4 — fixed 490px so the headline breaks exactly where Figma breaks */
+.concerns__title {
+  width: 490px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-concerns-title);
+  line-height: var(--lh-concerns-title);
+  color: var(--c-ink);
+}
+
+/* Node 43:5 — 201 x 46, vertically offset 31px inside the 108px header */
+.concerns__pill {
+  width: 201px;
+  height: 46px;
+  margin-top: 31px;
+  text-decoration: none;
+}
+
+/* Node 43:8 — 3 columns of 396, 26px gaps in both axes */
+.concerns__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 396px);
+  gap: 26px;
+  width: var(--content-w);
+  margin: 46px auto 0; /* [FIGMA] header ends at 204, grid starts at 250 */
+}
+
+/* Node 43:10 — card, 396 x 298 with a 14px inset on all four sides */
+.concern {
+  position: relative;
+  width: 396px;
+  height: 298px;
+  padding: 16px 14px 14px; /* label starts at y=16; plate ends 14px off the bottom */
+  border-radius: var(--r-card);
+  background: var(--c-surface);
+  cursor: pointer;
+}
+
+/* Node 43:11 — 368 x 40 */
+.concern__label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 368px;
+  height: 40px;
+}
+
+/* Node 43:12 — the text stack sits 8px in from the label box */
+.concern__txt {
+  padding-left: 8px;
+}
+
+/* Nodes 43:13 … — 21px line box */
+.concern__title {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-card-title);
+  line-height: var(--lh-card-title);
+  color: var(--c-ink);
+  white-space: nowrap;
+}
+
+/* Nodes 43:14 … — y=24 within the 40px text stack, 16px line box */
+.concern__sub {
+  margin-top: 3px; /* [FIGMA] title box ends at 21, sub starts at 24 */
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-card-sub);
+  line-height: var(--lh-card-sub);
+  color: var(--c-muted);
+  white-space: nowrap;
+}
+
+/* Node 43:15 — 38 x 38, offset 1px down inside the 40px label row */
+.concern__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 38px;
+  height: 38px;
+  margin-top: 1px;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-pill);
+  color: var(--c-ink);
+}
+
+/* Node 43:17 — 368 x 214, starting at y=70 within the card */
+.concern__plate {
+  width: 368px;
+  height: 214px;
+  margin-top: 14px; /* [FIGMA] label ends at 56, plate starts at 70 */
+  border-radius: var(--r-plate);
+  overflow: hidden;
+}
+
+.concern__plate-inner {
+  width: 100%;
+  height: 100%;
+  /* [INFERRED] the Figma node is a rounded-rectangle; its fill is not in the
+     metadata payload, so a flat tint stands in for the plate. */
+}
