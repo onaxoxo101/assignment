@@ -4,54 +4,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact — Onamma Nwosu</title>
+    <meta name="description" content="Get in touch with Onamma Chinaza Nwosu — email, phone and a contact form.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <header>
+        <nav class="nav" aria-label="Primary">
+            <a class="nav__brand" href="index.html">
+                <span class="nav__dot" aria-hidden="true"></span>
+                Onamma<span style="color:var(--text-dim)">.dev</span>
+            </a>
 
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Homepage</a>
-                    </li>
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutpage.html">About</a></li>
+                <li><a href="mentor.html">Mentor</a></li>
+                <li><a href="chess.html">Chess</a></li>
+                <li><a href="scores.html">Scores</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-                    <li>
-                        <a href="aboutpage.html">About</a>
-                    </li>
+            <a class="btn btn--primary nav__cta" href="contact.html">
+                Let's talk <span class="arrow" aria-hidden="true">↗</span>
+            </a>
 
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
+            <button class="nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+            </button>
+        </nav>
+    </header>
 
-                    <li>
-                        <a href="mentor.html">Mentor</a>
-                    </li>
+    <main>
+        <section class="hero" style="padding-bottom:0">
+            <div class="shell">
+                <span class="eyebrow" data-reveal>Contact</span>
+                <h1 class="hero__title" style="font-size:clamp(2.6rem,7.5vw,5.2rem)" data-reveal>
+                    Let's start a<br><em>conversation</em>
+                </h1>
+                <p class="hero__copy" data-reveal>
+                    Whether it's a project, an internship or a question about something on this site —
+                    send it over and I'll reply.
+                </p>
+            </div>
+        </section>
 
-                    <li>
-                        <a href="chess.html">Chesspage</a>
-                    </li>
+        <section class="section">
+            <div class="shell split">
+                <div>
+                    <div class="contact-list" style="margin-bottom:22px">
+                        <a class="contact-row" href="mailto:onanwosu18373@gmail.com" data-reveal>
+                            <span>
+                                <span class="contact-row__label">Email</span><br>
+                                <span class="contact-row__value">onanwosu18373@gmail.com</span>
+                            </span>
+                            <span class="arrow" aria-hidden="true">↗</span>
+                        </a>
+                        <a class="contact-row" href="tel:+2348058464733" data-reveal>
+                            <span>
+                                <span class="contact-row__label">Phone</span><br>
+                                <span class="contact-row__value">0805 846 4733</span>
+                            </span>
+                            <span class="arrow" aria-hidden="true">↗</span>
+                        </a>
+                        <div class="contact-row" data-reveal>
+                            <span>
+                                <span class="contact-row__label">Location</span><br>
+                                <span class="contact-row__value">Lagos, Nigeria</span>
+                            </span>
+                            <span aria-hidden="true">◉</span>
+                        </div>
+                        <div class="contact-row" data-reveal>
+                            <span>
+                                <span class="contact-row__label">Availability</span><br>
+                                <span class="contact-row__value">Open to new projects</span>
+                            </span>
+                            <span aria-hidden="true">✦</span>
+                        </div>
+                    </div>
 
-                    <li>
-                        <a href="scores.html">Scores</a>
-                    </li>
-
-
-                </ul>
-            </nav>
-
-            <main>
-                <div class="Profile">
-                    <img src="./Onamma.jpg" alt="Onamma" width="40%">
-                    <p>My Profile</p>
+                    <figure class="hero__portrait" data-reveal style="margin:0;aspect-ratio:4/3">
+                        <img src="./Onamma.jpg" alt="Portrait of Onamma Chinaza Nwosu">
+                        <figcaption>
+                            <span>Onamma Chinaza Nwosu</span>
+                            <span>Usually replies within a day</span>
+                        </figcaption>
+                    </figure>
                 </div>
 
-                <p>
-                    Phone Number: 08058464733 <br>
-                    Email : onanwosu18373@gmail.com
-                </p>
-            </main>
-    </body>
+                <div class="panel" data-reveal>
+                    <h2 class="section-title" style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:10px">
+                        Send a <em>message</em>
+                    </h2>
+                    <p class="lede" style="font-size:15.5px;margin-bottom:26px">
+                        Fill this in and it will open in your mail app, addressed to me.
+                    </p>
+
+                    <form data-contact-form novalidate>
+                        <div class="field">
+                            <label for="name">Your name</label>
+                            <input id="name" name="name" type="text" placeholder="Jane Doe" autocomplete="name">
+                        </div>
+                        <div class="field">
+                            <label for="email">Email address</label>
+                            <input id="email" name="email" type="email" placeholder="jane@example.com"
+                                autocomplete="email">
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project…"></textarea>
+                        </div>
+                        <button class="btn btn--primary" type="submit">
+                            Send message <span class="arrow" aria-hidden="true">↗</span>
+                        </button>
+                        <p data-form-status role="status"
+                            style="margin-top:14px;font-size:14px;color:var(--text-dim)"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="shell">
+            <div class="footer__top">
+                <p class="footer__brand">Web developer &amp; design student, Lagos.</p>
+                <div class="footer__cols">
+                    <div class="footer__col">
+                        <h4>Pages</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="aboutpage.html">About</a></li>
+                            <li><a href="mentor.html">Mentor</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4>More</h4>
+                        <ul>
+                            <li><a href="chess.html">Chess</a></li>
+                            <li><a href="scores.html">Scores</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Reach me</h4>
+                        <ul>
+                            <li><a href="mailto:onanwosu18373@gmail.com">onanwosu18373@gmail.com</a></li>
+                            <li><a href="tel:+2348058464733">0805 846 4733</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>© <span data-year>2026</span> Onamma Chinaza Nwosu</span>
+                <span>Built by hand with HTML, CSS &amp; JavaScript</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
 
 </html>

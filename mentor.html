@@ -4,75 +4,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentor</title>
+    <title>Mentor — Onamma Nwosu</title>
+    <meta name="description" content="A profile of Adachukwu Nwosu — doctor, entrepreneur and the mentor behind this portfolio.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Homepage</a>
-                </li>
+        <nav class="nav" aria-label="Primary">
+            <a class="nav__brand" href="index.html">
+                <span class="nav__dot" aria-hidden="true"></span>
+                Onamma<span style="color:var(--text-dim)">.dev</span>
+            </a>
 
-                <li>
-                    <a href="aboutpage.html">About</a>
-                </li>
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutpage.html">About</a></li>
+                <li><a href="mentor.html">Mentor</a></li>
+                <li><a href="chess.html">Chess</a></li>
+                <li><a href="scores.html">Scores</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
+            <a class="btn btn--primary nav__cta" href="contact.html">
+                Let's talk <span class="arrow" aria-hidden="true">↗</span>
+            </a>
 
-                <li>
-                    <a href="mentor.html">Mentor</a>
-                </li>
+            <button class="nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+            </button>
+        </nav>
+    </header>
 
-                <li>
-                    <a href="chess.html">Chesspage</a>
-                </li>
+    <main>
+        <section class="hero" style="padding-bottom:0">
+            <div class="shell">
+                <span class="eyebrow" data-reveal>My mentor</span>
+                <h1 class="hero__title" style="font-size:clamp(2.6rem,7.5vw,5.2rem)" data-reveal>
+                    Adachukwu<br><em>Nwosu</em>
+                </h1>
+                <p class="hero__copy" data-reveal>
+                    Doctor, entrepreneur, and the person whose example set the standard I work toward.
+                </p>
+            </div>
+        </section>
 
-                <li>
-                    <a href="scores.html">Scores</a>
-                </li>
+        <section class="section">
+            <div class="shell split split--sidebar">
+                <aside class="profile-card" data-reveal>
+                    <div class="profile-card__img">
+                        <img src="./mymentor.jpg" alt="Portrait of Adachukwu Nwosu">
+                    </div>
+                    <div class="profile-card__body">
+                        <h3>Adachukwu Nwosu</h3>
+                        <p>Medical doctor &amp; business owner, Lagos.</p>
+                        <div class="tags" style="padding-top:0">
+                            <span class="tag">Medicine</span>
+                            <span class="tag">Business</span>
+                            <span class="tag">Mentorship</span>
+                        </div>
+                    </div>
+                </aside>
 
-                <div class="mentor">
-                    <img src="./mymentor.jpg" alt="mentor" width="40%">
-                    <p>Mentor</p>
+                <div>
+                    <div class="panel" data-reveal style="margin-bottom:22px">
+                        <h2 class="section-title" style="font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:18px">
+                            Why she's my <em>mentor</em>
+                        </h2>
+                        <p class="lede" style="margin-bottom:16px">
+                            Adachukwu built two demanding careers at once — medicine and business — and did it
+                            without letting either one slip. She grew up in Lagos, worked her way to a medical
+                            degree with top honours from the University of Lagos, and went into healthcare
+                            because she wanted the work to actually relieve something for somebody.
+                        </p>
+                        <p class="lede">
+                            What I take from her isn't the CV. It's the habit underneath it: decide what you
+                            want to be good at, then put in the unglamorous hours until you are. That's the
+                            approach I'm trying to apply to development — steady practice over shortcuts.
+                        </p>
+                    </div>
+
+                    <dl class="fact-list" data-reveal>
+                        <div class="fact"><dt>Profession</dt><dd>Medical doctor</dd></div>
+                        <div class="fact"><dt>Also</dt><dd>Business owner &amp; entrepreneur</dd></div>
+                        <div class="fact"><dt>Education</dt><dd>University of Lagos — Medicine</dd></div>
+                        <div class="fact"><dt>Based in</dt><dd>Lagos, Nigeria</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tight">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow" data-reveal>What I've learned</span>
+                        <h2 class="section-title" data-reveal>Lessons I'm <em>keeping</em></h2>
+                    </div>
                 </div>
 
+                <div class="service-grid">
+                    <article class="service" data-reveal>
+                        <div class="service__icon" aria-hidden="true">◇</div>
+                        <h3>Depth beats dabbling</h3>
+                        <p>Two real careers, not five half-finished ones. Finish what you start before
+                            reaching for the next thing.</p>
+                    </article>
+                    <article class="service" data-reveal>
+                        <div class="service__icon" aria-hidden="true">◈</div>
+                        <h3>Do the work quietly</h3>
+                        <p>Results earn attention on their own. The hours nobody sees are the ones that
+                            decide the outcome.</p>
+                    </article>
+                    <article class="service" data-reveal>
+                        <div class="service__icon" aria-hidden="true">◉</div>
+                        <h3>Build for people</h3>
+                        <p>Medicine or web development — the point is always the person on the other side
+                            of it.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
+        <section class="section section--tight">
+            <div class="shell">
+                <div class="cta" data-reveal>
+                    <h2>See what I'm <em>building</em></h2>
+                    <p>The projects where I'm putting these lessons into practice.</p>
+                    <div class="cta__actions">
+                        <a class="btn btn--primary" href="index.html#work">
+                            View my work <span class="arrow" aria-hidden="true">↗</span>
+                        </a>
+                        <a class="btn btn--ghost" href="aboutpage.html">About me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-            </ul>
-        </nav>
+    <footer class="footer">
+        <div class="shell">
+            <div class="footer__top">
+                <p class="footer__brand">Web developer &amp; design student, Lagos.</p>
+                <div class="footer__cols">
+                    <div class="footer__col">
+                        <h4>Pages</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="aboutpage.html">About</a></li>
+                            <li><a href="mentor.html">Mentor</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4>More</h4>
+                        <ul>
+                            <li><a href="chess.html">Chess</a></li>
+                            <li><a href="scores.html">Scores</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Reach me</h4>
+                        <ul>
+                            <li><a href="mailto:onanwosu18373@gmail.com">onanwosu18373@gmail.com</a></li>
+                            <li><a href="tel:+2348058464733">0805 846 4733</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>© <span data-year>2026</span> Onamma Chinaza Nwosu</span>
+                <span>Built by hand with HTML, CSS &amp; JavaScript</span>
+            </div>
+        </div>
+    </footer>
 
-        <main>
-            <h1>BIOGRAPHY OF ADACHUKWU NWOSU</h1>
-
-
-            <p>
-
-
-
-                Adachukwu Nwosu: A Multifaceted Leader and Inspirational Figure <br>
-
-                Adachukwu Nwosu is a remarkable individual who has left an indelible mark in the realms of business and
-                medicine. <br>
-                Renowned as a business tycoon, doctor, and an unwavering source of inspiration, <br>
-                she exemplifies the epitome of resilience, dedication, and success. <br>
-
-                Born and raised in the vibrant city of Lagos, Nigeria, Adachukwu exhibited exceptional intellect and
-                determination from an early age. <br>
-                Her insatiable curiosity and thirst for knowledge propelled her to
-                pursue dual careers in both business and medicine, setting her apart as a multifaceted leader. <br>
-
-                In her pursuit of academic excellence, Adachukwu excelled academically, graduating with top honors from
-                the prestigious University of Lagos. <br>
-                Armed with a degree in Medicine, she embarked on a journey to make
-                a meaningful impact in the healthcare industry, driven by a profound desire to alleviate human suffering
-                and promote well-being. <br>
-            </p>
-
-        </main>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
