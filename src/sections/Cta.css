@@ -1,0 +1,66 @@
+/* Figma: "Section / CTA" (1:285) */
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 150px var(--gutter) 0;
+}
+
+/* --- CTA band (1:286) -------------------------------------------------- */
+.cta__band {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+  padding: 96px 100px;
+  background: var(--ink);
+  border-radius: var(--r-band);
+  overflow: hidden;
+}
+
+.cta__title {
+  font-size: 62px;
+  font-weight: var(--w-regular);
+  line-height: 81px;
+  text-align: center;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.cta__note {
+  width: 700px;
+  font-size: 22px;
+  font-weight: var(--w-regular);
+  line-height: 34px;
+  text-align: center;
+  color: var(--white-72);
+}
+
+.cta__buttons {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  padding-top: 18px;
+}
+
+.cta__email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 22px;
+  font-size: 18px;
+  line-height: 23px;
+  white-space: nowrap;
+}
+
+.cta__emailLead {
+  font-weight: var(--w-regular);
+  color: var(--white-55);
+}
+
+.cta__emailAddress {
+  font-weight: var(--w-medium);
+  color: var(--white);
+}

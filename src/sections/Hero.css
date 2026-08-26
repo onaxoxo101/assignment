@@ -1,0 +1,189 @@
+/* Figma: loose children of frame "portfolio" (1:34), y 0 → 1470.
+   Every offset below is the node's absolute x/y on the 1440 artboard. */
+
+.hero {
+  position: relative;
+  width: var(--canvas-width);
+  height: 1470px;
+  overflow: hidden;
+}
+
+/* --- Nav pill (1:35) + nav content (1:36) ------------------------------ */
+.hero__navPill {
+  position: absolute;
+  left: 370px;
+  top: 24px;
+  width: 679px;
+  height: 80px;
+  background: var(--ink-80);
+  border-radius: var(--r-nav);
+}
+
+.hero__nav {
+  position: absolute;
+  left: 413px;
+  top: 35px;
+  width: 626px;
+  height: 58.30982208251953px;
+  display: flex;
+  align-items: center;
+  gap: 98px;
+}
+
+.hero__navLinks {
+  display: flex;
+  align-items: center;
+  gap: 78px;
+  font-size: 20px;
+  font-weight: var(--w-medium);
+  line-height: 26px;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.hero__navLink {
+  position: relative;
+}
+
+/* --- Download CV (1:53) ------------------------------------------------ */
+.hero__downloadCv {
+  position: absolute;
+  left: 1146px;
+  top: 29px;
+}
+
+/* --- Availability badge (1:57) ----------------------------------------- */
+.hero__badge {
+  position: absolute;
+  left: 624px;
+  top: 190px;
+  width: 192px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero__badgeDot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--available);
+  flex: 0 0 auto;
+}
+
+.hero__badgeLabel {
+  font-size: 20px;
+  font-weight: var(--w-medium);
+  line-height: 26px;
+  color: var(--black);
+  white-space: nowrap;
+}
+
+/* --- Portrait (1:63) --------------------------------------------------- */
+.hero__portrait {
+  position: absolute;
+  left: 594px;
+  top: 255px;
+  width: 253px;
+  height: 247px;
+  border: 21px solid var(--white);
+  border-radius: 34px;
+  overflow: hidden;
+  background: var(--chip-bg);
+}
+
+.hero__portraitImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Figma crop on 1:63: h 140.11%, top -20.66%. */
+  object-position: 50% 34.5%;
+}
+
+/* --- Headline block (1:60) --------------------------------------------- */
+.hero__headline {
+  position: absolute;
+  left: 356px;
+  top: 531px;
+  width: 727px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--black);
+  white-space: nowrap;
+}
+
+.hero__name {
+  font-size: 62px;
+  line-height: 81px;
+  font-weight: var(--w-regular);
+  text-align: center;
+}
+
+.hero__role {
+  font-size: 38px;
+  line-height: 49px;
+  font-weight: var(--w-semibold);
+}
+
+/* --- Standfirst (1:64) ------------------------------------------------- */
+.hero__lede {
+  position: absolute;
+  left: 294px;
+  top: 690px;
+  width: 852px;
+  font-size: 25px;
+  font-weight: var(--w-regular);
+  line-height: 35px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* --- Buttons (1:45) ---------------------------------------------------- */
+.hero__buttons {
+  position: absolute;
+  left: 530px;
+  top: 789px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+/* --- Marquee (1:342) --------------------------------------------------- */
+.hero__marquee {
+  position: absolute;
+  left: 130px;
+  top: 956px;
+  width: 1324px;
+  height: 430px;
+  overflow: hidden;
+}
+
+.hero__marqueeTrack {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Card frame: 544 × 430, 10px white border, 42px radius (1:344 et al). */
+.hero__card {
+  width: 544px;
+  height: 430px;
+  flex: 0 0 auto;
+  border: 10px solid var(--white);
+  border-radius: var(--r-card);
+  overflow: hidden;
+  background: var(--chip-bg);
+}
+
+.hero__cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 32px;
+}

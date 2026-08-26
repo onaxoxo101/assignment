@@ -1,0 +1,170 @@
+/* Figma: "Section / Live Projects" (1:66) */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 72px;
+  padding: 130px var(--gutter) 0;
+}
+
+/* --- Header (1:67) ----------------------------------------------------- */
+.projects__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.projects__titleBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.projects__title {
+  font-size: 56px;
+  font-weight: var(--w-regular);
+  line-height: 73px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* --- Card list (1:76) -------------------------------------------------- */
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  width: 100%;
+}
+
+/* --- Card (1:77) ------------------------------------------------------- */
+.project {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  width: 100%;
+  padding: 24px 44px 24px 24px;
+  background: var(--white);
+  box-shadow: inset 0 0 0 1px var(--hairline);
+  border-radius: var(--r-card);
+  overflow: hidden;
+}
+
+/* 1:117 (CVER) has no thumbnail and therefore no column gap. */
+.project--noThumb {
+  gap: 0;
+}
+
+.project__thumb {
+  width: 470px;
+  height: 340px;
+  flex: 0 0 auto;
+  border-radius: var(--r-thumb);
+  overflow: hidden;
+  background: var(--chip-bg);
+}
+
+.project__thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--r-thumb);
+}
+
+.project__body {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* --- Meta row (1:80) --------------------------------------------------- */
+.project__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.project__number {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: var(--w-semibold);
+  letter-spacing: 1px;
+  color: var(--accent);
+}
+
+.project__dash {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: var(--w-regular);
+  color: var(--muted);
+}
+
+.project__metaText {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: var(--w-medium);
+  color: var(--muted);
+}
+
+.project__title {
+  font-size: 42px;
+  font-weight: var(--w-semibold);
+  line-height: 55px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.project__subtitle {
+  font-size: 22px;
+  font-weight: var(--w-medium);
+  line-height: 29px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.project__description {
+  width: 600px;
+  font-size: 18px;
+  font-weight: var(--w-regular);
+  line-height: 28px;
+  color: var(--muted);
+}
+
+/* --- Tags (1:87) ------------------------------------------------------- */
+.project__tags {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.tag {
+  padding: 10px 18px;
+  background: var(--chip-bg);
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: var(--w-medium);
+  line-height: 20px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* --- "View case study" link (1:94) ------------------------------------- */
+.project__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: var(--w-semibold);
+  line-height: 23px;
+  color: var(--accent);
+  white-space: nowrap;
+}

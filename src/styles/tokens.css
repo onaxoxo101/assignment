@@ -1,0 +1,55 @@
+/* Design tokens transcribed verbatim from the Figma file
+   "portfolio-2" (sMEWZpxwvaahHFijGmfoJT). Values are literal Figma
+   values — do not round or "tidy" them. */
+
+:root {
+  /* ---- Canvas ---------------------------------------------------- */
+  --canvas-width: 1440px;
+  --page-bg: #ffffff;
+
+  /* ---- Colour ------------------------------------------------------
+     Sampled from the Figma nodes listed beside each value. */
+  --ink: #0d0d0d;              /* headings, nav pill, CTA band        */
+  --ink-80: rgba(13, 13, 13, 0.8);   /* nav pill fill, outline borders */
+  --ink-87: rgba(13, 13, 13, 0.87);  /* hero "View Projects" fill      */
+  --black: #000000;            /* hero H1 + badge label (1:59, 1:61)  */
+  --muted: #626262;            /* body copy                           */
+  --muted-case: #6b6b6b;       /* case-study body copy (1:781)        */
+  --muted-chip: #3d3d3d;       /* case-study chip label (1:785)       */
+  --accent: #f97316;           /* eyebrow / numerals / primary button */
+  --hairline: #e5e5e5;         /* card borders, review divider        */
+  --divider: #e0e0e0;          /* footer + stat dividers              */
+  --chip-bg: #f2f2f2;          /* project tag pill                    */
+  --chip-bg-case: #f0f0f0;     /* case-study chip                     */
+  --dashed: #dcdcdc;           /* case-study hero cover border        */
+  --white: #ffffff;
+  --white-72: rgba(255, 255, 255, 0.72);  /* CTA sub-copy   (1:291)   */
+  --white-55: rgba(255, 255, 255, 0.55);  /* CTA email lead (1:299)   */
+  --white-35: rgba(255, 255, 255, 0.35);  /* CTA ghost border (1:296) */
+
+  /* ---- Type -------------------------------------------------------- */
+  --font: 'Geist Variable', 'Geist', ui-sans-serif, system-ui,
+    -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semibold: 600;
+  --w-bold: 700;
+
+  /* ---- Shared geometry --------------------------------------------- */
+  --gutter: 120px;             /* every section's horizontal padding   */
+  --content-width: 1200px;     /* 1440 - (120 * 2)                     */
+  --r-pill: 34px;              /* buttons + chips                      */
+  --r-card: 42px;              /* project cards, marquee cards         */
+  --r-step: 32px;              /* process / review cards               */
+  --r-thumb: 28px;             /* project thumbnails                   */
+  --r-band: 48px;              /* CTA band                             */
+  --r-nav: 63px;               /* nav pill                             */
+}
+
+:root {
+  /* Fill of the "Available to work" dot (Figma 1:58). The MCP bridge exports
+     this node as an opaque SVG and does not surface the fill value, so this is
+     sampled from the node render rather than read from the file. */
+  --available: #17c216;
+}

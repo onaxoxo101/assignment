@@ -1,0 +1,397 @@
+/* Figma: the shared case-study sections, e.g. frame "Case Study / SORA" (1:763). */
+
+/* ===== Hero (1:775) ==================================================== */
+.caseHero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 40px var(--gutter) 0;
+}
+
+/* 1:1577 (Vendify) has no cover, so its hero carries no column gap. */
+.caseHero--noCover {
+  gap: 0;
+}
+
+.caseHero__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  width: 100%;
+}
+
+/* Eyebrow here is 6px / 8px gap / 12px type — smaller than the landing one. */
+.caseHero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.caseHero__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: 0 0 auto;
+}
+
+.caseHero__eyebrowLabel {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: var(--w-medium);
+  letter-spacing: 1.4px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.caseHero__title {
+  font-size: 76px;
+  line-height: 84px;
+  font-weight: var(--w-semibold);
+  letter-spacing: -1.5px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.caseHero__subtitle {
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: var(--w-regular);
+  color: var(--muted-case);
+  white-space: nowrap;
+}
+
+.caseHero__intro {
+  width: 760px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: var(--w-regular);
+  color: var(--muted-case);
+}
+
+.caseHero__tags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.caseChip {
+  padding: 8px 14px;
+  background: var(--chip-bg-case);
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: var(--w-medium);
+  color: var(--muted-chip);
+  white-space: nowrap;
+}
+
+.caseHero__spacer {
+  flex: 1 0 0;
+  min-width: 0;
+  height: 1px;
+}
+
+.caseHero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: var(--w-medium);
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* Hero cover (1:794) — dashed placeholder frame around the project render. */
+.caseHero__cover {
+  width: 100%;
+  border: 1px dashed var(--dashed);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.caseHero__coverImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* ===== Screens (1:820) ================================================= */
+.caseScreens {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 100px var(--gutter) 0;
+}
+
+.caseScreens__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.caseScreens__title {
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: var(--w-semibold);
+  letter-spacing: -0.6px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.caseScreens__note {
+  width: 720px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: var(--w-regular);
+  color: var(--muted-case);
+}
+
+/* Carousel (1:824) — 1200 × 720, #141414, 28px radius. */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  background: #141414;
+  border-radius: var(--r-thumb);
+  overflow: hidden;
+}
+
+.carousel__viewport {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 940px;
+  height: 650px;
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+}
+
+.carousel__slide {
+  width: 940px;
+  height: 650px;
+  flex: 0 0 auto;
+  margin-right: 40px; /* 980 stride − 940 slide (Figma 1:830 → 1:831) */
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1e1e1e;
+}
+
+.carousel__slideImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Arrows (1:825, 1:827) — 56px, white, centred at y 332. */
+.carousel__arrow {
+  position: absolute;
+  top: 332px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: var(--r-thumb);
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: var(--w-medium);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.carousel__arrow--prev {
+  left: 32px;
+}
+
+.carousel__arrow--next {
+  left: 1112px;
+}
+
+/* Carousel footer (1:834) */
+.carousel__footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.carousel__count {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: var(--w-medium);
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.carousel__caption {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: var(--w-regular);
+  color: var(--muted-case);
+  white-space: nowrap;
+}
+
+.carousel__spacer {
+  flex: 1 0 0;
+  min-width: 0;
+  height: 1px;
+}
+
+/* Dots (1:838) — four 8px dots on a 16px pitch across 56px. */
+.carousel__dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 56px;
+  height: 8px;
+  flex: 0 0 auto;
+}
+
+.carousel__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--divider);
+  padding: 0;
+}
+
+.carousel__dot--active {
+  background: var(--accent);
+}
+
+/* ===== Results (1:843) ================================================= */
+.caseResults {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 80px var(--gutter) 0;
+}
+
+.caseResults__row {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  width: 100%;
+}
+
+.resultCard {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 32px;
+  background: var(--white);
+  box-shadow: inset 0 0 0 1px #ececec;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.resultCard__title {
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: var(--w-semibold);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.resultCard__body {
+  width: 100%;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: var(--w-regular);
+  color: var(--muted-case);
+}
+
+/* ===== Project nav (1:862) ============================================= */
+.caseFooterNav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+  padding: 80px var(--gutter) 100px;
+}
+
+.caseFooterNav__rule {
+  width: 100%;
+  height: 1px;
+  background: var(--divider);
+  flex: 0 0 auto;
+}
+
+.caseFooterNav__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.caseFooterNav__side {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.caseFooterNav__arrow {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  border-radius: var(--r-thumb);
+  font-size: 35px;
+  line-height: 46px;
+  font-weight: var(--w-medium);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.caseFooterNav__label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.caseFooterNav__label--end {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.caseFooterNav__kicker {
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: var(--w-regular);
+  color: var(--muted-case);
+}
+
+.caseFooterNav__name {
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: var(--w-semibold);
+  color: var(--ink);
+}
