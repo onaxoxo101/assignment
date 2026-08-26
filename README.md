@@ -39,6 +39,37 @@ Until this has been run, each image element removes itself and its container's
 own fill shows through — **the layout is identical either way**, because every
 image box carries the dimensions the design specifies.
 
+## Deploying to Vercel
+
+The repo is already configured — `vercel.json` sets the build command, output
+directory and the SPA rewrite that keeps `/case-study/:slug` from 404ing on a
+hard refresh.
+
+**Option A — connect the repo (recommended).** In the Vercel dashboard:
+*Add New → Project*, import `onaxoxo101/assignment`, and set the production
+branch to `claude/figma-portfolio-implementation-43e3tq` (or merge to `main`
+first). Vercel detects Vite and reads `vercel.json`; no further settings needed.
+
+**Option B — from your machine.**
+
+```bash
+npx vercel            # preview deploy
+npx vercel --prod     # production deploy
+```
+
+### Images on the deploy
+
+`public/assets/*.png` is git-ignored, so a clean checkout has no image bytes.
+The deploy build runs `npm run vercel-build`, which fetches them from Figma
+first — add a **`FIGMA_TOKEN`** environment variable in
+*Project → Settings → Environment Variables* and every build will pull the
+current renders.
+
+Without that variable the build still succeeds and the site ships with the
+image boxes empty; nothing about the layout changes. If you would rather not
+give Vercel a token, run `npm run fetch:assets` locally, drop the
+`public/assets/*.png` line from `.gitignore`, and commit the PNGs instead.
+
 ## Verifying fidelity
 
 ```bash

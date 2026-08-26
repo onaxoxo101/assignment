@@ -18,14 +18,23 @@ import { fileURLToPath } from 'node:url'
 const here = dirname(fileURLToPath(import.meta.url))
 const outDir = resolve(here, '../public/assets')
 
+// `--optional` lets a build continue when no token is configured, so a deploy
+// without FIGMA_TOKEN still ships (with the image boxes empty) instead of failing.
+const optional = process.argv.includes('--optional')
+
 const token = process.env.FIGMA_TOKEN
 if (!token) {
-  console.error(
+  const message =
     'FIGMA_TOKEN is not set.\n' +
-      'Create a personal access token at ' +
-      'https://www.figma.com/developers/api#access-tokens then run:\n\n' +
-      '  FIGMA_TOKEN=figd_xxx npm run fetch:assets\n'
-  )
+    'Create a personal access token at ' +
+    'https://www.figma.com/developers/api#access-tokens then run:\n\n' +
+    '  FIGMA_TOKEN=figd_xxx npm run fetch:assets\n'
+
+  if (optional) {
+    console.warn(`Skipping Figma asset fetch — ${message}`)
+    process.exit(0)
+  }
+  console.error(message)
   process.exit(1)
 }
 
@@ -97,4 +106,4 @@ for (const [scale, entries] of byScale) {
 }
 
 console.log(`\n${written} asset(s) written to public/assets${failed ? `, ${failed} failed` : ''}.`)
-if (failed) process.exitCode = 1
+if (failed && !optional) process.exitCode = 1
