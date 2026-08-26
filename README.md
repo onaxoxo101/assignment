@@ -70,6 +70,23 @@ image boxes empty; nothing about the layout changes. If you would rather not
 give Vercel a token, run `npm run fetch:assets` locally, drop the
 `public/assets/*.png` line from `.gitignore`, and commit the PNGs instead.
 
+## Single-file preview build
+
+```bash
+npm run build:preview
+```
+
+Bundles the entire app — React, Framer Motion and the Geist fonts — into one
+self-contained HTML document at `dist-artifact/artifact/index.html`, with no
+external requests. Useful for sharing a working preview without hosting.
+
+It differs from the deployed build in two ways, both about the viewing surface
+rather than the design: it uses `HashRouter`, since there is no server to
+rewrite deep paths, and it scales the 1440px artboard down to fit narrower
+viewports the way Figma previews a frame (1:1 at 1440px and above). It also
+sets `__OMIT_ASSETS__`, so image elements are skipped rather than requesting
+PNGs that a single file cannot carry.
+
 ## Verifying fidelity
 
 ```bash
