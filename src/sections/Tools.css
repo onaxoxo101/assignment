@@ -1,0 +1,54 @@
+/* Figma: "Section / Tools" (1:227) */
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 130px var(--gutter) 0;
+}
+
+.tools__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.tools__title {
+  font-size: 44px;
+  font-weight: var(--w-regular);
+  line-height: 57px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.tools__note {
+  width: 700px;
+  font-size: 20px;
+  font-weight: var(--w-regular);
+  line-height: 32px;
+  color: var(--muted);
+}
+
+/* --- Chips (1:234) ----------------------------------------------------- */
+.tools__chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 14px;
+  width: 100%;
+}
+
+.chip {
+  padding: 16px 28px;
+  background: var(--white);
+  box-shadow: inset 0 0 0 1px var(--hairline);
+  border-radius: var(--r-pill);
+  font-size: 18px;
+  font-weight: var(--w-medium);
+  line-height: 23px;
+  color: var(--ink);
+  white-space: nowrap;
+}

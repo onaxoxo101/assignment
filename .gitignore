@@ -1,0 +1,8 @@
+node_modules
+dist
+dist-artifact
+.DS_Store
+*.local
+
+# Figma renders — populate with `npm run fetch:assets`
+public/assets/*.png

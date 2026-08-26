@@ -1,0 +1,113 @@
+/* Figma: "Section / Footer" (1:301) */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 44px;
+  padding: 130px var(--gutter) 40px;
+}
+
+.footer__rule {
+  width: 100%;
+  height: 1px;
+  background: var(--divider);
+  flex: 0 0 auto;
+}
+
+/* --- Footer top (1:303) ------------------------------------------------ */
+.footer__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.footer__brandName {
+  font-size: 28px;
+  font-weight: var(--w-semibold);
+  line-height: 36px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.footer__brandBlurb {
+  width: 340px;
+  font-size: 17px;
+  font-weight: var(--w-regular);
+  line-height: 27px;
+  color: var(--muted);
+}
+
+.footer__socials {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.footer__social {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--divider);
+  border-radius: 34px;
+  font-size: 14px;
+  font-weight: var(--w-medium);
+  line-height: 18px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* --- Link columns (1:316, 1:325, 1:332) -------------------------------- */
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.footer__colTitle {
+  font-size: 18px;
+  font-weight: var(--w-semibold);
+  line-height: 23px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* 1:318 / 1:327 / 1:334 — a 1 × 4 spacer under each column heading. */
+.footer__colSpacer {
+  width: 1px;
+  height: 4px;
+  flex: 0 0 auto;
+}
+
+.footer__link {
+  font-size: 17px;
+  font-weight: var(--w-regular);
+  line-height: 22px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* --- Footer bottom (1:339) --------------------------------------------- */
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  font-weight: var(--w-regular);
+  line-height: 21px;
+  color: var(--muted);
+  white-space: nowrap;
+}

@@ -1,0 +1,22 @@
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: 0 0 auto;
+}
+
+.eyebrow__label {
+  font-size: 16px;
+  font-weight: var(--w-medium);
+  line-height: 21px;
+  letter-spacing: 2.4px;
+  color: var(--accent);
+  white-space: nowrap;
+}
