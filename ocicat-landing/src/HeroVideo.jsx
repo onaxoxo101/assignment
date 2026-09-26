@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 
-export const HERO_VIDEO = '/videos/house-hero.mp4'
-export const HERO_POSTER = '/images/hero-house.jpg'
+export const HERO_VIDEO = 'videos/house-hero.mp4'
+export const HERO_POSTER = 'images/hero-house.jpg'
 
 // Autoplaying, muted, looping house video. It only plays while on screen.
 // If the video file is missing, it falls back to the poster with a slow push-in

@@ -131,7 +131,7 @@ function SocialPill() {
   return (
     <motion.div className="social-pill" variants={fadeUp} {...inView}>
       <div className="avatars">
-        {[1, 2, 3, 4].map((n) => <img key={n} src={`/images/avatar-${n}.jpg`} alt="" />)}
+        {[1, 2, 3, 4].map((n) => <img key={n} src={`images/avatar-${n}.jpg`} alt="" />)}
       </div>
       Loved by 2000+ creators and businesses
     </motion.div>
@@ -145,7 +145,7 @@ function Logos() {
     <section className="logos">
       <SocialPill />
       <Marquee speed={50} pauseOnHover={false} className="logos-marquee">
-        {logos.map((l) => <img key={l} src={`/images/logo-${l}.png`} alt={l} className={`logo logo-${l}`} />)}
+        {logos.map((l) => <img key={l} src={`images/logo-${l}.png`} alt={l} className={`logo logo-${l}`} />)}
       </Marquee>
     </section>
   )
@@ -202,7 +202,7 @@ function UseCases() {
         >
           {useCases.map(([img, title, sub]) => (
             <motion.article key={img} className="uc-card" variants={fadeUp} whileHover={{ y: -8 }}>
-              <div className="uc-img"><img src={`/images/${img}.jpg`} alt="" /></div>
+              <div className="uc-img"><img src={`images/${img}.jpg`} alt="" /></div>
               <div className="uc-body">
                 <h3>{title}</h3>
                 <p>{sub}</p>
@@ -334,7 +334,7 @@ function Testimonials() {
               <div className="stars">{[1, 2, 3, 4, 5].map((s) => <Star key={s} filled={s <= 4} />)}</div>
               <blockquote>“{r.quote}”</blockquote>
               <figcaption>
-                <img src={`/images/${r.img}.jpg`} alt="" />
+                <img src={`images/${r.img}.jpg`} alt="" />
                 <div><b>{r.name}</b><span>{r.role}</span></div>
               </figcaption>
             </figure>

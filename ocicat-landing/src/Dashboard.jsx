@@ -12,10 +12,10 @@ const nav = ['Dashboard', 'Templates', 'Create Video', 'My Projects', 'AI Assets
 const navBottom = ['Billing', 'Settings', 'Help & Support']
 const tools = ['Scenes', 'Media', 'Text', 'Music', 'Transition', 'Brand Kit']
 const scenes = [
-  { img: '/images/hero-house.jpg', label: 'Exterior - Aerial View' },
-  { img: '/images/room-living.jpg', label: 'Living Room' },
-  { img: '/images/room-kitchen.jpg', label: 'Kitchen' },
-  { img: '/images/room-bedroom.jpg', label: 'Master Bedroom' },
+  { img: 'images/hero-house.jpg', label: 'Exterior - Aerial View' },
+  { img: 'images/room-living.jpg', label: 'Living Room' },
+  { img: 'images/room-kitchen.jpg', label: 'Kitchen' },
+  { img: 'images/room-bedroom.jpg', label: 'Master Bedroom' },
 ]
 const changes = ['Cinematic color grading', 'Added camera movement', 'Enhanced contrast', 'Added subtle lens flare']
 const chips = ['Regenerate', 'Add drone shot', 'Change music', 'Add subtitles']
@@ -63,7 +63,7 @@ export default function Dashboard() {
             <span className="db-grow" />
             <span className="db-pill db-pill--light"><Sparkles width={10} height={10} /> Upgrade plan</span>
             <span className="db-pill">Export ▾</span>
-            <span className="db-user"><img src="/images/avatar-john.jpg" alt="" />John Doe</span>
+            <span className="db-user"><img src="images/avatar-john.jpg" alt="" />John Doe</span>
           </header>
 
           <div className="db-body">
@@ -145,13 +145,13 @@ export default function Dashboard() {
                 <small>Ocicat AI · 10:45 AM</small>
                 I’ve enhanced the color grading, added cinematic camera movement and subtle lens flare.
                 <div className="db-compare">
-                  <img src="/images/hero-house.jpg" alt="" />
+                  <img src="images/hero-house.jpg" alt="" />
                   <motion.div
                     className="db-compare-after"
                     animate={{ clipPath: ['inset(0 0 0 30%)', 'inset(0 0 0 70%)'] }}
                     transition={{ duration: 3, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
                   >
-                    <img src="/images/hero-house.jpg" alt="" />
+                    <img src="images/hero-house.jpg" alt="" />
                   </motion.div>
                   <span className="db-tag">Before</span>
                   <span className="db-tag db-tag--r">After</span>
