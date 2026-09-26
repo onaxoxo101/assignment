@@ -24,6 +24,9 @@ export const Mic = (p) => (
 export const Sliders = (p) => (
   <svg {...base} {...p}><path d="M4 7h10M18 7h2M4 17h4M12 17h8" /><circle cx="16" cy="7" r="2" /><circle cx="10" cy="17" r="2" /><path d="M4 12h2M10 12h10" /><circle cx="8" cy="12" r="2" /></svg>
 )
+export const Share = (p) => (
+  <svg {...base} {...p}><path d="M12 15V3.5M7.5 8L12 3.5 16.5 8" /><path d="M5 13v5.5A2 2 0 007 20.5h10a2 2 0 002-2V13" /></svg>
+)
 export const Check = (p) => (
   <svg {...base} {...p}><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
 )

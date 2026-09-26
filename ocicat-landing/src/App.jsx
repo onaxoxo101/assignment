@@ -13,7 +13,7 @@ import Marquee from './Marquee.jsx'
 import HeroVideo from './HeroVideo.jsx'
 import Dashboard from './Dashboard.jsx'
 import {
-  CC, Check, CheckCircle, Chevron, Mail, Mic, Phone, Pin, Quote, Sliders, Sparkles, Speaker, Star, TextIcon, Wand,
+  CC, Check, CheckCircle, Chevron, Mail, Mic, Phone, Pin, Quote, Share, Sliders, Sparkles, Speaker, Star, TextIcon, Wand,
 } from './icons.jsx'
 
 export default function App() {
@@ -64,13 +64,13 @@ function Nav() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease }}
     >
-      <a href="#top" className="nav-logo">Ocicat AI Studio</a>
+      <a href="#top" className="nav-logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); setOpen(false) }}>Ocicat AI Studio</a>
       <nav className={`nav-links ${open ? 'is-open' : ''}`}>
         {links.map(([label, href]) => (
           <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
         ))}
       </nav>
-      <a href="#pricing" className="btn btn-gradient nav-cta"><Sparkles /> Try it Now</a>
+      <a href="#pricing" className="btn btn-gradient nav-cta" onClick={() => setOpen(false)}><Sparkles /> Try it Now</a>
       <button className="nav-burger" aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)}>
         <span /><span />
       </button>
@@ -98,7 +98,7 @@ function Hero() {
   return (
     <section className="hero" id="top">
       <motion.div className="hero-copy" variants={stagger(0.12, 0.3)} initial="hidden" animate="show">
-        <motion.h1 variants={fadeUp}>Turning ideas into,<br />stunning videos in minutes</motion.h1>
+        <motion.h1 variants={fadeUp}>Turning ideas into,{' '}<br />stunning videos in minutes</motion.h1>
         <motion.p variants={fadeUp}>
           Ocicat AI is the all-in-one AI video creation platform that helps you generate scripts,
           visuals, voiceovers, subtitles and more.
@@ -227,7 +227,7 @@ const steps = [
   [Mic, 'Describe your idea', 'Write a single prompt about the video you want to create.'],
   [Sparkles, 'AI Generates', 'Our AI generates the script, scenes, voice over and visuals.'],
   [Sliders, 'Customize', 'Edit scenes, text, voices and style to match your brand.'],
-  [Sparkles, 'Export & Share', 'Download in any format and share anywhere.'],
+  [Share, 'Export & Share', 'Download in any format and share anywhere.'],
 ]
 
 function Steps() {
@@ -283,7 +283,7 @@ function Features() {
   return (
     <section className="section features" ref={ref}>
       <motion.div className="features-copy" variants={stagger(0.08)} {...inView}>
-        <motion.h2 variants={fadeUp}>Professional Videos.<br />Without the hassle.</motion.h2>
+        <motion.h2 variants={fadeUp}>Professional Videos.{' '}<br />Without the hassle.</motion.h2>
         <ul>
           {featureList.map((f) => (
             <motion.li key={f} variants={fadeUp}><Check /> {f}</motion.li>
@@ -415,7 +415,7 @@ function Pricing() {
                 {p.items.map((i) => <li key={i}><CheckCircle /> {i}</li>)}
               </ul>
               <motion.a
-                href="#top"
+                href="#pricing"
                 className={`btn ${p.featured ? 'btn-gradient' : 'btn-white'} plan-cta`}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
@@ -486,6 +486,9 @@ const footerCols = [
   ['Support', ['Getting started', 'Help center', 'Server status', 'Report a bug', 'Chat support']],
 ]
 
+// Footer links that have a matching section on this page.
+const footerAnchors = { Features: '#how-it-works', Pricing: '#pricing', 'Case studies': '#use-cases', Reviews: '#reviews' }
+
 function Footer() {
   return (
     <motion.footer className="footer" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8 }}>
@@ -497,7 +500,7 @@ function Footer() {
         {footerCols.map(([title, links]) => (
           <div key={title} className="footer-col">
             <h4>{title}</h4>
-            {links.map((l) => <a key={l} href="#top">{l}</a>)}
+            {links.map((l) => <a key={l} href={footerAnchors[l] ?? '#top'}>{l}</a>)}
           </div>
         ))}
         <div className="footer-col">
